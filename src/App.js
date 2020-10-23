@@ -1,19 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Rock, Paper, Scissors - COMING SOON...
-        </p>
-        
-      </header>
-    </div>
-  );
+import Navigation from './components/navbar'
+
+  const App = () => {
+    return (
+      <div>
+        <Navigation />
+      </div>
+    )
 }
 
 export default App;

@@ -1,0 +1,31 @@
+.play-area{
+    height: 75vh;
+}
+
+body{
+    background-color: black;
+}
+
+#user{
+    border-right:5px solid white;
+    padding-right: 250px;
+}
+
+
+
+@media screen and (min-width: 500px) {
+#min-contain{
+    min-width: 510px;
+}
+
+    #user{
+        background-color:lightgrey;
+        border-right:5px solid white;
+        padding-right: 0px;
+    }
+
+    #cpu{
+        background-color:darkgrey;
+    }
+
+}

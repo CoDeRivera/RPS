@@ -21,7 +21,7 @@ const Navigation = () => {
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto" >
                 <Nav.Link href="#start" style={{color:"white"}} onClick={() => startGame()}>Start</Nav.Link>
-                <Nav.Link href="#LEaderboard" style={{color:"white"}} onClick={() => showLeaderboard()}>Leaderboard</Nav.Link>                
+                <Nav.Link href="#Leaderboard" style={{color:"white"}} onClick={() => showLeaderboard()}>Leaderboard</Nav.Link>                
             </Nav>
             </Navbar.Collapse>
         </Navbar>

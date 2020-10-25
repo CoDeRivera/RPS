@@ -11,14 +11,14 @@ const PlayTable = () => {
                 <Row style={{border:"1px dashed black"}}>
                     <Col id='user' className='play-area'>
                         <img alt='User_Rock' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/user_rock.png' />
-                        <img alt='User_Paper' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/user_paper.png' />
-                        <img alt='User_Scissors' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/user_scissors.png' />
+                        {/* <img alt='User_Paper' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/user_paper.png' />
+                        <img alt='User_Scissors' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/user_scissors.png' /> */}
                     </Col>
                     <Col className='middle'>|</Col>
                     <Col  id='cpu' className='play-area'>
                         <img alt='CPU_Scissors' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509718/RPS/cpu_scissors.png' /><br />
-                        <img alt='CPU_Rock' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509718/RPS/cpu_rock.png' />
-                        <img alt='CPU_Paper' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509718/RPS/cpu_paper.png' />
+                        {/* <img alt='CPU_Rock' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509718/RPS/cpu_rock.png' />
+                        <img alt='CPU_Paper' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509718/RPS/cpu_paper.png' /> */}
                         
                     </Col>
                 </Row>

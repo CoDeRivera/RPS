@@ -1,20 +1,25 @@
 .play-area{
-    height: 75vh;
+    height: 50vh;
 }
 
 body{
-    background-color: black;
+    /* background-color: black; */
 }
 
-#user{
-    border-right:5px solid white;
-    padding-right: 250px;
+.play-area{
+    margin-top:5%;
+    border:1px dashed black;
+    /* padding-right: 250px; */
+}
+
+#user img, #cpu img{
+    max-width:100%;
 }
 
 
 
 @media screen and (min-width: 500px) {
-#min-contain{
+/* #min-contain{
     min-width: 510px;
 }
 
@@ -26,6 +31,6 @@ body{
 
     #cpu{
         background-color:darkgrey;
-    }
+    } */
 
 }

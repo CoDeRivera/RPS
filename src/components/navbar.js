@@ -19,6 +19,7 @@ const Navigation = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto" >
+<<<<<<< HEAD
                 {/* Opens Start Modal */}
                 <Nav.Link href="#start" style={{color:"white"}}  onClick={() => setShowStartModal(true)}>
                    Start
@@ -36,6 +37,10 @@ const Navigation = () => {
                     show={showStreaksModal}
                     onHide={() => setShowStreaksModal(false)}
                 />                               
+=======
+                <Nav.Link href="#start" style={{color:"white"}} onClick={() => startGame()}>Start</Nav.Link>
+                <Nav.Link href="#Leaderboard" style={{color:"white"}} onClick={() => showLeaderboard()}>Leaderboard</Nav.Link>                
+>>>>>>> feature/playTable
             </Nav>
             </Navbar.Collapse>
         </Navbar>

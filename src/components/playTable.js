@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import CpuPick from './cpuPick'
+import UserPick from './userPick.js'
 
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import '../css/playTableStyles.css'
@@ -21,9 +22,7 @@ const PlayTable = () => {
             <Container id='min-contain'>
                 <Row >
                     <Col id='user' className='play-area'>
-                        <img alt='User_Rock' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/user_rock.png' />
-                        {/* <img alt='User_Paper' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/user_paper.png' /> */}
-                        {/*<img alt='User_Scissors' src='https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/user_scissors.png' /> */}
+                        <UserPick roundCount={round} />    
                     </Col>
                     <Col  id='cpu' className='play-area'>
                        <CpuPick roundCount={round} />
@@ -41,7 +40,5 @@ export default PlayTable
 
 
 
-//user_rock = https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/user_rock.jpg
-//user_paper = https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509830/RPS/user_paper.jpg
-//user_scissor = https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509964/RPS/user_scissor.jpg
+
 

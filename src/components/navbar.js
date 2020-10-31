@@ -1,18 +1,19 @@
 import React from 'react';
+import {useState} from 'react'
 import {Navbar, Nav} from 'react-bootstrap';
+import StartModal from './startModal'
+import StreakBoardModal from './streakBoardModal'
 
 
 const Navigation = () => {
 
-    const startGame = () =>{
-        //Will start the game
-        alert('Game will Start!')
-    }
+    const [showStartModal, setShowStartModal] = useState(false);
+    const [showStreaksModal, setShowStreaksModal] = useState(false);
 
-    const showLeaderboard = () => {
-        //Will display a modal with the top scores
-        alert('See the top scores!')
-    }
+
+
+
+
 
     return(
         <Navbar bg="dark" expand="lg" >
@@ -20,8 +21,24 @@ const Navigation = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto" >
-                <Nav.Link href="#start" style={{color:"white"}} onClick={() => startGame()}>Start</Nav.Link>
-                <Nav.Link href="#Leaderboard" style={{color:"white"}} onClick={() => showLeaderboard()}>Leaderboard</Nav.Link>                
+
+                {/* Opens Start Modal */}
+                <Nav.Link href="#start" style={{color:"white"}}  onClick={() => setShowStartModal(true)}>
+                   Start
+                </Nav.Link>
+                <StartModal
+                    show={showStartModal}
+                    onHide={() => setShowStartModal(false)}
+                />                    
+
+                {/* Opens Streaks Board */}
+                <Nav.Link href="#streaks" style={{color:"white"}} onClick={() => setShowStreaksModal(true)}>
+                    Streaks
+                </Nav.Link>   
+                <StreakBoardModal 
+                    show={showStreaksModal}
+                    onHide={() => setShowStreaksModal(false)}
+                />                               
             </Nav>
             </Navbar.Collapse>
         </Navbar>

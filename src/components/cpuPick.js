@@ -6,8 +6,8 @@ const CpuPick = (props) => {
     const [cpuPicked, setCpuPicked] = useState('cpu_rock.jpg')  //Will need to be set to null when loading playTable
   
     //Runs once component first mounts (For Testing Purposes Only)
-    useEffect(() => cpuTurn()
-    ,[])
+    // useEffect(() => cpuTurn()
+    // ,[])
 
     //Runs when new round has started
     useEffect(() => cpuTurn()

@@ -1,0 +1,25 @@
+.choice-group{
+    display:inline-block;
+    height:45vh;
+    width:29%;
+}
+
+.choice-tiles{
+    background-color:lightblue;
+    height:15vh;
+    border:3px outset grey;
+    text-align: center;
+    line-height: 65px;
+}
+
+.choice-tiles:active{
+    background-color: rgb(103, 156, 226);
+    border:3px inset grey;
+}
+
+.user-image{
+
+    display:inline-block;
+    width:50%;
+    text-align: right;
+}

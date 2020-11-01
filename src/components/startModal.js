@@ -3,6 +3,18 @@ import {Modal, Button, InputGroup, FormControl} from 'react-bootstrap'
 
 
 const StartModal = (props) => {
+  
+  //Handles start button after its been pushed - Game has started - Must push "true" for playTable to show
+  const handleStart = () => {
+      //data to send to parent to show playTable
+      console.log('Start Game...')
+   
+
+      //========================================
+
+      props.onHide()
+    }
+
     return (
       <Modal
         {...props}
@@ -21,7 +33,7 @@ const StartModal = (props) => {
             </InputGroup>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.onHide}>Start</Button>
+          <Button onClick={handleStart}>Start</Button>
         </Modal.Footer>
       </Modal>
     );

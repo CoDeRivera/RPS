@@ -11,10 +11,6 @@ const Navigation = () => {
     const [showStreaksModal, setShowStreaksModal] = useState(false);
 
 
-
-
-
-
     return(
         <Navbar bg="dark" expand="lg" >
             <Navbar.Brand href="#home" style={{color:"white"}}>R.P.S!</Navbar.Brand>
@@ -26,6 +22,7 @@ const Navigation = () => {
                 <Nav.Link href="#start" style={{color:"white"}}  onClick={() => setShowStartModal(true)}>
                    Start
                 </Nav.Link>
+
                 <StartModal
                     show={showStartModal}
                     onHide={() => setShowStartModal(false)}

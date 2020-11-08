@@ -20,6 +20,25 @@ const PlayTable = () => {
     
 
     return (
+
+        <Container fluid >
+            <br /> 
+        <center><h1>Round: {round}</h1></center>
+            <Container id='min-contain'>
+                <Row >
+                    <Col id='user' className='play-area'>
+                        <UserPick roundCount={round} />    
+                    </Col>
+                    <Col  id='cpu' className='play-area'>
+                       <CpuPick roundCount={round} />
+                    </Col>
+                </Row>
+            </Container>
+            <br />
+            <center><Button variant='success' onClick={()=> handleNextRound()}>Next Round</Button></center>
+        </Container>
+    )
+
                 gameStarted
                         ?
 
@@ -42,6 +61,7 @@ const PlayTable = () => {
                 null
         
             )
+
 }
 
 

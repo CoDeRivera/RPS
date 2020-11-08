@@ -1,16 +1,19 @@
 .choice-group{
-    display:inline-block;
-    height:45vh;
-    width:29%;
+   width:95%;
+    position: absolute;
+    bottom:5px;
+    text-align: center; 
 }
-
 .choice-tiles{
     background-color:lightblue;
     height:15vh;
+    margin:5px;
     border:3px outset grey;
     text-align: center;
     line-height: 65px;
+    display:inline-block;   width:29%;
 }
+
 
 .choice-tiles:active{
     background-color: rgb(103, 156, 226);

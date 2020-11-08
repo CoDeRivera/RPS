@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
+import '../css/cpuPickStyles.css';
+
 
 const CpuPick = (props) => {
     //Maintains state of random hand gesture generated for each round
@@ -31,8 +33,12 @@ const CpuPick = (props) => {
     }
 
     return(
-        <div>             
-            <img alt="CPU's choice" src={`https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509718/RPS/${cpuPicked}`} />
+        <div>
+               
+            <center><h3>CPU</h3></center>      
+            <img className='cpu-image' alt="CPU's choice" src={`https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509718/RPS/${cpuPicked}`} />
+      
+            
         </div>
     )
 }

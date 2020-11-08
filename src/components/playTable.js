@@ -17,8 +17,9 @@ const PlayTable = () => {
     
 
     return (
-        <Container fluid > 
-        <h1>Round: {round}</h1>
+        <Container fluid >
+            <br /> 
+        <center><h1>Round: {round}</h1></center>
             <Container id='min-contain'>
                 <Row >
                     <Col id='user' className='play-area'>
@@ -29,6 +30,7 @@ const PlayTable = () => {
                     </Col>
                 </Row>
             </Container>
+            <br />
             <center><Button variant='success' onClick={()=> handleNextRound()}>Next Round</Button></center>
         </Container>
     )

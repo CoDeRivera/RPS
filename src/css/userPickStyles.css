@@ -1,46 +1,11 @@
-
-.choice-group{
-   width:95%;
-    position: absolute;
-    bottom:5px;
-    text-align: center; 
-}
-.choice-tiles{
-    background-color:lightblue;
-    height:15vh;
-    margin:5px;
-    border:3px outset grey;
-    text-align: center;
-    line-height: 65px;
-    display:inline-block;   width:29%;
-
-/* .choice-group{
-     display:inline-block; 
-    height:45vh;
-    width:29%;
-} */
-
-/* .choice-tiles{
-    background-color:lightblue;
-    /* height:15vh;
-    width:33%; 
-    border:3px outset grey;
-    text-align: center;
-    line-height: 65px;
-    margin-right:0;
-}
-
-*/
-
-
 .choice-group{
     text-align: center;
 }
 
 .choice-tiles{
     display:inline-block;
-    border:1px dashed red;
-    width:31%;
+    /* border:1px dashed red; */
+    width:29%;
     margin:0 5px;
 
 }

@@ -13,17 +13,7 @@ const UserPick = () => {
         <div>
 
             <center><h3>{playerName}</h3></center> 
-            <div className='user-image'>
-                <img  alt="User's Pick" src={`https://res.cloudinary.com/dd6mwtyrj/image/upload/v1603509987/RPS/${userPicked}`} />            
-            </div>
-            <div className='choice-group'>
-                <div className='choice-tiles' onClick={() => setUserPicked('user_rock.jpg')}>Rock</div>
-                <div className='choice-tiles' onClick={() => setUserPicked('user_paper.jpg')}>Paper</div>
-                <div className='choice-tiles' onClick={() => setUserPicked('user_scissors.jpg')}>Scissors</div>
-            </div>
-            
-           
-            
+
 
             <Container>
                 <Row>
@@ -36,9 +26,9 @@ const UserPick = () => {
                 <Row>
                     <Col>
                         <div className='choice-group'>                        
-                            <Button variant='success'  className='choice-tiles' onClick={() => setUserPicked('user_rock.jpg')}>Rock</Button>
-                            <Button variant='success'  className='choice-tiles' onClick={() => setUserPicked('user_paper.jpg')}>Paper</Button>
-                            <Button variant='success'  className='choice-tiles' onClick={() => setUserPicked('user_scissors.jpg')}>Scissors</Button>
+                            <Button variant='primary'  className='choice-tiles' onClick={() => setUserPicked('user_rock.jpg')}>Rock</Button>
+                            <Button variant='primary'  className='choice-tiles' onClick={() => setUserPicked('user_paper.jpg')}>Paper</Button>
+                            <Button variant='primary'  className='choice-tiles' onClick={() => setUserPicked('user_scissors.jpg')}>Scissors</Button>
                         </div>
                     </Col>
                 </Row>

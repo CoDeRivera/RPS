@@ -1,19 +1,19 @@
-import React, {useState, useEffect} from 'react'
-
+import React, {useState, useEffect, useContext} from 'react'
 import '../css/cpuPickStyles.css';
+
+import {AppContext} from '../contexts/AppContext'
 
 
 const CpuPick = (props) => {
+    const GameData = useContext(AppContext)
+
     //Maintains state of random hand gesture generated for each round
     const [cpuPicked, setCpuPicked] = useState('cpu_rock.jpg')  //Will need to be set to null when loading playTable
   
-    //Runs once component first mounts (For Testing Purposes Only)
-    // useEffect(() => cpuTurn()
-    // ,[])
 
     //Runs when new round has started
-    useEffect(() => cpuTurn()
-    , [props.roundCount])
+    useEffect(() => {cpuTurn()}
+    , [GameData.round])
 
     //Generates a random hand position for CPU's Turn
     const cpuTurn = () => {

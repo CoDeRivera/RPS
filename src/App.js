@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navigation from './components/navbar'
 import PlayTable from './components/playTable'
 
-  const App = () => {
+import AppContextProvider from './contexts/AppContext'
 
-    // State will be dependent on <PlayTable /> return values...
-    // **************  const [hasGameStarted, setHasGameStarted] = useState(true) - (Ready 4 Delete)***
+const App = () => {
 
-    return (
-      <div>
-        <Navigation />
-        <PlayTable />
-      </div>
+    return (      
+      <AppContextProvider>
+          <Navigation />
+          <PlayTable />
+      </AppContextProvider>
     )
 }
 
-export default App;
+export default App

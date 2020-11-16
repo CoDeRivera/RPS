@@ -6,13 +6,13 @@ import {Row, Col, Container, Button} from 'react-bootstrap'
 import {AppContext} from '../contexts/AppContext'
 
 const UserPick = () => {
-    const GameData = useContext(AppContext)
+    const {playerName} = useContext(AppContext)
     const [userPicked, setUserPicked] = useState('user_rock.jpg')
     // const [playerName, setPlayerName] = useState("Player's Name")
     return(
         <div>
 
-            <center><h3>{GameData.playerName}</h3></center> 
+            <center><h3>{playerName}</h3></center> 
             <Container>
                 <Row>
                     <Col>

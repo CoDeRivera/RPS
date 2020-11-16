@@ -4,15 +4,18 @@ import {Modal, Button, InputGroup, FormControl} from 'react-bootstrap'
 import {AppContext} from '../contexts/AppContext'
 
 const StartModal = (props) => {  
-  const GameData = useContext(AppContext)
+  const {playerName, setPlayerName, setIsGameStarted} = useContext(AppContext)
     //Handles start button after its been pushed - Game has started - Must push "true" for playTable to show
   
-  const handleStartGame = (name) => {
+  const handleStartGame = (e, name) => {
+    console.log('event: ', e.playerName);
     //Needs a check so Plaer's Name is not blank
     //  Code Here
     //==========================================
-    GameData.setPlayerName(name)
-    GameData.setIsGameStarted()     
+    e.playerName === '' || undefined ?
+    alert('Please enter your Name.')
+    :
+    setIsGameStarted()     
     props.onHide()   
     console.log('Game is now running.') 
   }   
@@ -31,11 +34,11 @@ const StartModal = (props) => {
       </Modal.Header>
       <Modal.Body>
           <InputGroup size="lg">
-              <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm"  />
+              <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" id='playerName' onChange={(e) => setPlayerName(e.target.value)}  />
           </InputGroup>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={() =>  handleStartGame('SHaDoWCoDe64')}>Start</Button>
+        <Button onClick={() =>  handleStartGame({playerName})}>Start</Button>
       </Modal.Footer>
     </Modal>
   );

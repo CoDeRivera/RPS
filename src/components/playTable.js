@@ -5,24 +5,19 @@ import '../css/playTableStyles.css'
 import CpuPick from './cpuPick'
 import UserPick from './userPick.js'
 
-import {AppContext} from '../contexts/AppContext'
+import {AppContext, round, setRound} from '../contexts/AppContext'
 
 const PlayTable = () => {
 
-    const GameData = useContext(AppContext)
-
-    const handleNextRound = () => {
-        GameData.setRound()
-        console.log('STarTing NexT RounD!')
-    }   
+    const {isGameStarted, round, setRound} = useContext(AppContext) 
 
     return (            
                 
-            GameData.isGameStarted                    
+            isGameStarted                    
             ?
 
                 <Container fluid > 
-                    <center><h1>Round: {GameData.round}</h1></center>
+                    <center><h1>Round: {round}</h1></center>
                     <Container id='min-contain'>
                         <Row >
                             <Col id='user' className='play-area'>
@@ -34,8 +29,7 @@ const PlayTable = () => {
                         </Row>
                     </Container>
                     <br />
-                    {/* <center><Button variant='success' onClick={()=> {console.log('gameStarted value: ', gameStarted)}}>Test</Button></center> */}
-                    <center><Button variant='success' onClick={()=> handleNextRound()}>Next Round</Button></center>
+                    <center><Button variant='success' onClick={()=> setRound}>Next Round</Button></center>
                 </Container>
             :
             null    

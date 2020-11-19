@@ -15,9 +15,11 @@ const StartModal = (props) => {
     e.playerName === '' || undefined ?
     alert('Please enter your Name.')
     :
-    setIsGameStarted()     
-    props.onHide()   
-    console.log('Game is now running.') 
+    
+    setIsGameStarted();   
+    props.onHide();   
+    console.log('Game is now running.') ;
+    
   }   
 
   return (      

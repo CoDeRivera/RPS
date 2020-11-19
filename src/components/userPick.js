@@ -5,10 +5,9 @@ import '../css/userPickStyles.css';
 import {Row, Col, Container, Button} from 'react-bootstrap' 
 import {AppContext} from '../contexts/AppContext'
 
-const UserPick = () => {
-    const {playerName} = useContext(AppContext)
-    const [userPicked, setUserPicked] = useState('user_rock.jpg')
-    // const [playerName, setPlayerName] = useState("Player's Name")
+const UserPick = (props) => {
+    const {playerName, userPicked} = useContext(AppContext)
+
     return(
         <div>
 
@@ -24,9 +23,9 @@ const UserPick = () => {
                 <Row>
                     <Col>
                         <div className='choice-group'>                        
-                            <Button variant='primary'  className='choice-tiles' onClick={() => setUserPicked('user_rock.jpg')}>Rock</Button>
-                            <Button variant='primary'  className='choice-tiles' onClick={() => setUserPicked('user_paper.jpg')}>Paper</Button>
-                            <Button variant='primary'  className='choice-tiles' onClick={() => setUserPicked('user_scissors.jpg')}>Scissors</Button>
+                            <Button variant='primary'  className='choice-tiles' disabled={props.nextRoundDisabled} onClick={() => props.handleOnSelection('user_rock.jpg')}>Rock</Button>
+                            <Button variant='primary'  className='choice-tiles' disabled={props.nextRoundDisabled} onClick={() => props.handleOnSelection('user_paper.jpg')}>Paper</Button>
+                            <Button variant='primary'  className='choice-tiles' disabled={props.nextRoundDisabled} onClick={() => props.handleOnSelection('user_scissors.jpg')}>Scissors</Button>
                         </div>
                     </Col>
                 </Row>

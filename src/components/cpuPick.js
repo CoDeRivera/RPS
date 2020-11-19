@@ -5,15 +5,13 @@ import {AppContext} from '../contexts/AppContext'
 
 
 const CpuPick = (props) => {
-    const GameData = useContext(AppContext)
 
     //Maintains state of random hand gesture generated for each round
-    const [cpuPicked, setCpuPicked] = useState('cpu_rock.jpg')  //Will need to be set to null when loading playTable
-  
+    const {cpuPicked, setCpuPicked, round} = useContext(AppContext)  //Will need to be set to null when loading playTable
 
     //Runs when new round has started
     useEffect(() => {cpuTurn()}
-    , [GameData.round])
+    , [round])
 
     //Generates a random hand position for CPU's Turn
     const cpuTurn = () => {

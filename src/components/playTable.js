@@ -1,15 +1,37 @@
-import React, {useContext} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import '../css/playTableStyles.css'
 
 import CpuPick from './cpuPick'
 import UserPick from './userPick.js'
 
-import {AppContext, round, setRound} from '../contexts/AppContext'
+import {AppContext} from '../contexts/AppContext'
 
 const PlayTable = () => {
 
-    const {isGameStarted, round, setRound} = useContext(AppContext) 
+    const {isGameStarted, round, setRound, setUserPicked} = useContext(AppContext)
+    const [nextRoundDisabled, setNextRoundDisabled] = useState(true)
+
+    //Will  signal next round started 
+    const handleOnClick = (userChoice) => {
+        setUserPicked(userChoice)
+        setRound(round + 1)
+        setNextRoundDisabled(true)
+        roundTimer()
+    }
+
+    const roundTimer = () => {
+        setTimeout(() => {
+            setNextRoundDisabled(false)
+            console.log('Continue to next round')
+        }, 2000)
+    }
+
+    useEffect(() => {
+        roundTimer()
+    },[])
+
+
 
     return (            
                 
@@ -21,7 +43,10 @@ const PlayTable = () => {
                     <Container id='min-contain'>
                         <Row >
                             <Col id='user' className='play-area'>
-                                <UserPick />    
+                                <UserPick 
+                                    handleOnSelection={handleOnClick}
+                                    nextRoundDisabled={nextRoundDisabled}
+                                />    
                             </Col>
                             <Col  id='cpu' className='play-area'>
                                 <CpuPick />
@@ -29,7 +54,7 @@ const PlayTable = () => {
                         </Row>
                     </Container>
                     <br />
-                    <center><Button variant='success' onClick={()=> setRound}>Next Round</Button></center>
+                    <center><Button variant='success' disabled={nextRoundDisabled}onClick={()=> handleOnClick('user_rock.jpg')}>Next Round</Button></center>
                 </Container>
             :
             null    

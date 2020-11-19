@@ -6,12 +6,16 @@ import PlayTable from './components/playTable'
 
 import AppContextProvider from './contexts/AppContext'
 
+
+
 const App = () => {
+
 
     return (      
       <AppContextProvider>
           <Navigation />
           <PlayTable />
+          
       </AppContextProvider>
     )
 }
